@@ -1,0 +1,52 @@
+/* Style pour le bouton de déconnexion dans un menu dropdown */
+a.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    color: #333;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Changer la couleur au survol */
+  a.dropdown-item:hover {
+    background-color: #57648d; /* Rouge vif */
+    color: #fff; /* Texte en blanc */
+    transform: scale(1.05); /* Légère augmentation de la taille */
+  }
+  
+  /* Effet d'ombre au clic */
+  a.dropdown-item:active {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1); /* Réinitialisation de la taille lors du clic */
+  }
+  
+  /* Icône avec une légère transition */
+  a.dropdown-item i {
+    margin-right: 10px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Animation de l'icône lors du survol */
+  a.dropdown-item:hover i {
+    transform: rotate(180deg); /* Rotation de l'icône au survol */
+  }
+  
+  /* Texte */
+  a.dropdown-item span {
+    font-weight: bold;
+    font-size: 1em;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Ajout d'un léger effet d'ombre pour le texte */
+  a.dropdown-item span:hover {
+    opacity: 0.8;
+  }
+  

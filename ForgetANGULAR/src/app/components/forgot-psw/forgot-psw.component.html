@@ -1,0 +1,9 @@
+<div>
+    <h2>Mot de passe oublié</h2>
+    <form (ngSubmit)="onSubmit()">
+      <input type="email" [(ngModel)]="email" name="email" placeholder="Entrez votre email" required />
+      <button type="submit">Envoyer le lien de réinitialisation</button>
+    </form>
+    <p *ngIf="message">{{ message }}</p>
+  </div>
+  

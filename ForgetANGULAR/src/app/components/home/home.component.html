@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Website</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a routerLink="/user-list">Users</a>
+      <app-logout></app-logout>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Your Journey Begins Here</h2>
+    <p>Explore our services and learn how we can help you achieve your goals.</p>
+    <button onclick="location.href='#services'">Explore Services</button>
+  </section>
+
+  <section class="features" id="services">
+    <h2>Our Services</h2>
+    <div class="feature-card">
+      <h3>Service 1</h3>
+      <p>Discover the benefits of our first service, designed to bring you success.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Service 2</h3>
+      <p>Learn how our second service can support you on your journey.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Service 3</h3>
+      <p>Experience the difference with our third premium service offering.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Our Company. All rights reserved.</p>
+    <p><a href="#contact">Contact Us</a> | <a href="#about">About Us</a></p>
+  </footer>
+</body>
+</html>

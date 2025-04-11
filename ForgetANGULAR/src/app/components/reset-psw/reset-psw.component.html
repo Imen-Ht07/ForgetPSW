@@ -1,0 +1,58 @@
+<div class="reset-password-container">
+  <h2>Réinitialisation du mot de passe</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="resetPasswordForm">
+    
+    <!-- Password Input Field -->
+    <div class="form-group">
+      <label for="password">Nouveau mot de passe</label>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        formControlName="password"
+        placeholder="Entrez votre nouveau mot de passe"
+        required
+      />
+      <small *ngIf="f['password'].touched && f['password'].invalid" class="text-danger">
+        Mot de passe requis et doit comporter au moins 6 caractères
+      </small>
+    </div>
+
+    <!-- Confirm Password Input Field -->
+    <div class="form-group">
+      <label for="confirmPassword">Confirmer le mot de passe</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        class="form-control"
+        formControlName="confirmPassword"
+        placeholder="Confirmez votre mot de passe"
+        required
+      />
+      <small *ngIf="f['confirmPassword'].touched && f['confirmPassword'].invalid" class="text-danger">
+        La confirmation du mot de passe est requise et doit être identique
+      </small>
+      <small *ngIf="f['confirmPassword'].touched && f['confirmPassword'].hasError('mismatch')" class="text-danger">
+        Les mots de passe ne correspondent pas
+      </small>
+    </div>
+
+    <!-- Success Message Display -->
+    <div *ngIf="successMessage" class="alert alert-success">
+      {{ successMessage }}
+    </div>
+
+    <!-- Error Message Display -->
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary" [disabled]="resetPasswordForm.invalid || loading">
+      <span *ngIf="loading">
+        <i class="fa fa-spinner fa-spin"></i> Chargement...
+      </span>
+      <span *ngIf="!loading">Réinitialiser</span>
+    </button>
+  </form>
+</div>

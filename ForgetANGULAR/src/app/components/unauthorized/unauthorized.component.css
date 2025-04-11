@@ -1,0 +1,11 @@
+.unauthorized-page {
+    text-align: center;
+    margin-top: 100px;
+  }
+  .unauthorized-page h1 {
+    color: #d9534f;
+  }
+  .unauthorized-page p {
+    margin-top: 20px;
+  }
+  
